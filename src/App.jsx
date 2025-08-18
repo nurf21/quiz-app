@@ -1,5 +1,11 @@
+import StartScreen from "./components/StartScreen";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <StartScreen />
+    </>
+  );
 }
 
 export default App;
