@@ -47,8 +47,6 @@ export default function App() {
         selectedIndex: i,
       },
     ]);
-
-    setTimeout(() => goNext(), 1000);
   };
 
   const handleTimeout = () => {
@@ -66,8 +64,6 @@ export default function App() {
         selectedIndex: null,
       },
     ]);
-
-    setTimeout(() => goNext(), 1000);
   };
 
   const goNext = () => {
@@ -97,7 +93,6 @@ export default function App() {
     }, 1000);
 
     return () => clearInterval(timerRef.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, idx, useTimer]);
 
   useEffect(() => {
@@ -123,6 +118,7 @@ export default function App() {
           showAnswer={showAnswer}
           useTimer={useTimer}
           timeLeft={timeLeft}
+          onNext={goNext}
         />
       )}
       {phase === "result" && (

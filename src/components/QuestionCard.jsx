@@ -9,6 +9,7 @@ export default function QuestionCard({
   showAnswer,
   useTimer,
   timeLeft,
+  onNext,
 }) {
   return (
     <div className="bg-gray-800 text-white p-6 rounded-xl shadow-lg max-w-xl w-full">
@@ -51,18 +52,27 @@ export default function QuestionCard({
       </div>
 
       {showAnswer && (
-        <div className="mt-4 p-3 rounded bg-gray-700 border border-gray-600 text-sm">
-          {selectedIndex === q.correctIndex ? (
-            <span className="text-green-400 font-semibold">Correct! 🎉</span>
-          ) : (
-            <span className="text-red-400 font-semibold">Incorrect.</span>
-          )}
-          <div className="text-gray-300 mt-1">
-            Correct answer: <strong>{q.options[q.correctIndex]}</strong>
+        <div className="mt-4">
+          <div className="p-3 rounded bg-gray-700 border border-gray-600 text-sm">
+            {selectedIndex === q.correctIndex ? (
+              <span className="text-green-400 font-semibold">Correct! 🎉</span>
+            ) : (
+              <span className="text-red-400 font-semibold">Incorrect.</span>
+            )}
+            <div className="text-gray-300 mt-1">
+              Correct answer: <strong>{q.options[q.correctIndex]}</strong>
+            </div>
+            {q.explanation && (
+              <p className="text-gray-400 mt-1">{q.explanation}</p>
+            )}
           </div>
-          {q.explanation && (
-            <p className="text-gray-400 mt-1">{q.explanation}</p>
-          )}
+
+          <button
+            onClick={onNext}
+            className="mt-4 bg-blue-600 hover:bg-blue-700 transition-colors px-4 py-2 rounded-md font-semibold"
+          >
+            {index + 1 === total ? "Finish Quiz" : "Next Question"}
+          </button>
         </div>
       )}
     </div>
