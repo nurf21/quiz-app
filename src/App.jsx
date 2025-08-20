@@ -45,6 +45,7 @@ export default function App() {
         options: currentQ.options,
         correctIndex: currentQ.correctIndex,
         selectedIndex: i,
+        explanation: currentQ.explanation || "No explanation provided.",
       },
     ]);
   };
@@ -62,6 +63,7 @@ export default function App() {
         options: currentQ.options,
         correctIndex: currentQ.correctIndex,
         selectedIndex: null,
+        explanation: currentQ.explanation || "No explanation provided.",
       },
     ]);
   };
