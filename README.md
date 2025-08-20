@@ -1,12 +1,87 @@
-# React + Vite
+# 📝 Browser Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A browser-based multiple-choice quiz application built with **React** and **Tailwind CSS**.
+The app presents users with a series of quiz questions, gives **immediate feedback**, and shows detailed **results with explanations** at the end.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🎮 **Start screen** with quiz details and start button
+- ❓ **Multiple-choice questions** presented as cards
+- ✅ Immediate feedback on answers (green for correct, red for incorrect)
+- 📊 **Score tracking** throughout the quiz
+- ⏱️ Optional **1-minute timer per question** (with penalty if unanswered)
+- 📖 **Explanations** for each question to enhance learning
+- 📝 **Result screen** with:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  - Color-coded answers
+  - Correct/incorrect indicators (✅ ❌)
+  - Scrollable review list with explanations
+  - Restart button
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── components/
+ │   ├── QuestionCard.jsx
+ │   ├── ResultScreen.jsx
+ │   ├── StartScreen.jsx
+ │   └── Timer.jsx
+ ├── data/
+ │   └── quizData.js   # JSON-based quiz questions with explanations
+ ├── App.jsx
+ ├── index.css
+ └── main.jsx
+```
+
+---
+
+## 🛠️ Tech Stack
+
+- [React](https://react.dev/) – UI library
+- [Tailwind CSS](https://tailwindcss.com/) – utility-first styling
+- [Vite](https://vite.dev/) – build tool
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/nurf21/quiz-app
+cd quiz-app
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the app
+
+```bash
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 📚 Future Enhancements
+
+- 🔄 Shuffle questions & answers
+- 🏆 High scores / leaderboard
+- 🌙 Dark mode toggle
+- 📱 Improved mobile UI
+
+---
+
+## 📜 License
+
+This project is open-source under the [MIT License](LICENSE).
