@@ -22,6 +22,12 @@ The app presents users with a series of quiz questions, gives **immediate feedba
 
 ---
 
+## 🚀 Live Demo
+
+📍 **[View it here](https://nurf21.github.io/quiz-app/)**
+
+---
+
 ## 📂 Project Structure
 
 ```
