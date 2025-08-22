@@ -88,6 +88,13 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
+## 🧑‍💻 Credits
+
+- Project template and inspiration from [roadmap.sh](https://roadmap.sh/projects/quiz-app/)
+- Quiz icons created by Freepik - [Flaticon](https://www.flaticon.com/free-icons/quiz)
+
+---
+
 ## 📜 License
 
 This project is open-source under the [MIT License](LICENSE).
