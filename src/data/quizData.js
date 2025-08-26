@@ -63,4 +63,23 @@ export const quizData = [
     explanation:
       "The filter() method creates a new array with only the elements that match a condition.",
   },
+  {
+    question: "What is the correct syntax for a React functional component?",
+    options: [
+      "function MyComponent() {}",
+      "const MyComponent = () => {}",
+      "Both A and B",
+      "None of the above",
+    ],
+    correctIndex: 2,
+    explanation:
+      "Both function declarations and arrow functions can be used to define React functional components.",
+  },
+  {
+    question: "Which symbol is used for comments in JavaScript?",
+    options: ["//", "<!-- -->", "#", "/* */"],
+    correctIndex: 0,
+    explanation:
+      "In JavaScript, single-line comments are made using //, while multi-line comments use /* */.",
+  },
 ];
