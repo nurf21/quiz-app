@@ -3,8 +3,10 @@ import { quizData } from "./data/quizData";
 import StartScreen from "./components/StartScreen";
 import QuestionCard from "./components/QuestionCard";
 import ResultScreen from "./components/ResultScreen";
+import shuffleArray from "./utils/shuffleArray";
 
 export default function App() {
+  const [questions, setQuestions] = useState([]);
   const [phase, setPhase] = useState("start"); // start | quiz | result
   const [useTimer, setUseTimer] = useState(true);
 
@@ -17,10 +19,11 @@ export default function App() {
 
   const timerRef = useRef(null);
 
-  const total = quizData.length;
-  const currentQ = quizData[idx];
+  const total = questions.length;
+  const currentQ = questions[idx];
 
   const handleStart = () => {
+    setQuestions(shuffleArray(quizData));
     setPhase("quiz");
     setIdx(0);
     setScore(0);
