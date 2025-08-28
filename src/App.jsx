@@ -3,7 +3,7 @@ import { quizData } from "./data/quizData";
 import StartScreen from "./components/StartScreen";
 import QuestionCard from "./components/QuestionCard";
 import ResultScreen from "./components/ResultScreen";
-import shuffleArray from "./utils/shuffleArray";
+import shuffleQuestionsAndOptions from "./utils/shuffleArray";
 
 export default function App() {
   const [questions, setQuestions] = useState([]);
@@ -23,7 +23,7 @@ export default function App() {
   const currentQ = questions[idx];
 
   const handleStart = () => {
-    setQuestions(shuffleArray(quizData));
+    setQuestions(shuffleQuestionsAndOptions(quizData));
     setPhase("quiz");
     setIdx(0);
     setScore(0);
