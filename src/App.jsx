@@ -23,6 +23,7 @@ export default function App() {
   const currentQ = questions[idx];
 
   const handleStart = () => {
+    localStorage.removeItem("quizResults");
     setQuestions(shuffleQuestionsAndOptions(quizData));
     setPhase("quiz");
     setIdx(0);
@@ -81,6 +82,26 @@ export default function App() {
     setShowAnswer(false);
     setTimeLeft(60);
   };
+
+  useEffect(() => {
+    const savedData = localStorage.getItem("quizResults");
+    if (savedData) {
+      const { score, results, questions } = JSON.parse(savedData);
+      setScore(score);
+      setResults(results);
+      setQuestions(questions);
+      setPhase("result");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (phase === "result") {
+      localStorage.setItem(
+        "quizResults",
+        JSON.stringify({ score, results, questions })
+      );
+    }
+  }, [phase, score, results, questions]);
 
   useEffect(() => {
     if (phase !== "quiz" || !useTimer) return;
