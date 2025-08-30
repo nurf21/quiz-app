@@ -27,7 +27,7 @@ export default function StartScreen({ onStart, useTimer, setUseTimer }) {
 
       <button
         onClick={onStart}
-        className="bg-blue-600 hover:bg-blue-700 transition-colors text-white px-4 py-2 rounded-md font-semibold"
+        className="bg-blue-600 hover:bg-blue-700 cursor-pointer transition-colors text-white px-4 py-2 rounded-md font-semibold"
       >
         Start Quiz
       </button>
